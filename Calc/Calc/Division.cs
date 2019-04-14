@@ -52,7 +52,6 @@ namespace Calc
             bool put_comma = false; //Переменная, которая определяет наличие запятой
             int length_num2 = Arguments.number2.Length;
             int divider = Convert.ToInt32(Arguments.number2); //Записываем делитель
-            // Проверка
             while (!stop)
             {
                 int length_num1 = Arguments.number1.Length;
