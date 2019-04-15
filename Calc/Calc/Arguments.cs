@@ -12,6 +12,9 @@ namespace Calc
         public static string number2;
         public static string result;
         public static string operation;
+        public static string ostatok;
+
+        public static int ostatok_length;
 
         public static double num1;
         public static double num2;

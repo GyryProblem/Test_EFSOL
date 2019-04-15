@@ -48,19 +48,223 @@ namespace Calc
             Arguments.num2 = Arguments.num2 * e;
             Arguments.number1 = Convert.ToString(Arguments.num1);
             Arguments.number2 = Convert.ToString(Arguments.num2);
+            Arguments.ostatok = "";
             bool stop = false;  // Остановка цикла
             bool put_comma = false; //Переменная, которая определяет наличие запятой
-            int length_num2 = Arguments.number2.Length;
-            int divider = Convert.ToInt32(Arguments.number2); //Записываем делитель
+            int length_take = Arguments.number2.Length;
+            int divider = Convert.ToInt32(Arguments.number2);
+            //while (!stop)
+            //{
+            //    int length_num1 = Arguments.number1.Length;
+            //    if (length_take <= length_num1 + Arguments.ostatok.Length)
+            //    {
+            //        int i = 0; // Кол-во символов, которые будем рать для деления
+            //        while (Arguments.ostatok.Length != length_take)
+            //        {
+            //            if (Arguments.number1.Length + Arguments.ostatok.Length < length_take)
+            //            {
+            //                Arguments.number1 = Arguments.number1 + '0';
+            //                if (Arguments.result == null)
+            //                {
+            //                    Arguments.result = "0,";
+            //                    put_comma = true;
+            //                }
+            //                else
+            //                {
+            //                    if (!put_comma)
+            //                    {
+            //                        Arguments.result = Arguments.result + ',';
+            //                        put_comma = true;
+            //                    }
+            //                }
+            //            }
+            //            Arguments.ostatok = Arguments.ostatok + Arguments.number1[i];
+            //            if (i > 0)
+            //            {
+            //                if (Arguments.result != null)
+            //                {
+            //                    Arguments.result = Arguments.result + '0';
+            //                }
+            //            }
+            //            i++;
+            //        }
+            //        int dividend = Convert.ToInt32(Arguments.ostatok);
+            //        if (dividend > divider)
+            //        {
+            //            int c = dividend / divider;
+            //            Arguments.result = Arguments.result + Convert.ToString(c);
+            //            int ost = dividend - divider * c;
+            //            Arguments.ostatok = Convert.ToString(ost);
+            //            Arguments.number1 = Arguments.number1.Remove(0, i);
+            //        }
+            //        else
+            //        {
+            //            if (i <= length_num1)
+            //            {
+            //                if (Arguments.result != null)
+            //                {
+            //                    Arguments.result = Arguments.result + '0';
+            //                }
+            //                Arguments.ostatok = Arguments.ostatok + Arguments.number1[i];
+            //                dividend = Convert.ToInt32(Arguments.ostatok);
+            //                int c = dividend / divider;
+            //                Arguments.result = Arguments.result + Convert.ToString(c);
+            //                int ost = dividend - divider * c;
+            //                Arguments.ostatok = Convert.ToString(ost);
+            //                Arguments.number1 = Arguments.number1.Remove(0, i + 1);
+            //            }
+            //            else
+            //            {
+            //                Arguments.number1 = Arguments.number1 + '0';
+            //                if (!put_comma)
+            //                {
+            //                    Arguments.result = Arguments.result + ',';
+            //                    put_comma = true;
+            //                }
+            //                if (Arguments.result != null)
+            //                {
+            //                    Arguments.result = Arguments.result + '0';
+            //                }
+            //                Arguments.ostatok = Arguments.ostatok + Arguments.number1[i];
+            //                int c = dividend / divider;
+            //                Arguments.result = Arguments.result + Convert.ToString(c);
+            //                int ost = dividend - divider * c;
+            //                Arguments.ostatok = Convert.ToString(ost);
+            //                Arguments.number1 = Arguments.number1.Remove(0, i + 1);
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //    }
+            //}
+            //bool start = true;
+            //while (!stop)
+            //{
+            //    string ostatok = "";
+            //    int length_num1 = Arguments.number1.Length;
+            //    if (length_num1 >= length_take) //Если длина делимого больше
+            //    {
+            //        int i = 0;
+            //        if (Arguments.ostatok_length >= length_take)
+            //        {
+            //            while (i != Arguments.ostatok_length + 1)
+            //            {
+            //                ostatok = ostatok + Arguments.number1[i];
+            //                i++;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            while (i != length_take)
+            //            {
+            //                ostatok = ostatok + Arguments.number1[i];
+            //                i++;
+            //            }
+            //        }
+            //        if (!start)
+            //        {
+            //            if (Arguments.ostatok_length + 1 < ostatok.Length)
+            //            {
+            //                int add = ostatok.Length - 1 - Arguments.ostatok_length;
+            //                for (int y = 1; y <= add; y++)
+            //                {
+            //                    Arguments.result = Arguments.result + '0';
+            //                }
+
+            //            }
+            //        }
+            //        //if (Arguments.ostatok_length + 1 < ostatok.Length)
+            //        //{
+            //        //    int add = ostatok.Length - 1 - Arguments.ostatok_length;
+            //        //    if (!start)
+            //        //    {
+            //        //        for (int y = 1; y<=add; y++)
+            //        //        {
+            //        //            Arguments.result = Arguments.result + '0';
+            //        //        }
+            //        //    }
+            //        //}
+            //        int dividend = Convert.ToInt32(ostatok);
+            //        if (dividend >= divider)
+            //        {
+            //            int c = dividend / divider;
+            //            Arguments.result = Arguments.result + Convert.ToString(c);
+            //            int ost = dividend - c * divider;
+            //            ostatok = Convert.ToString(ost);
+            //            Arguments.ostatok_length = Convert.ToInt32(ostatok.Length);
+            //            Arguments.number1 = Arguments.number1.Remove(0, i);
+            //            Arguments.number1 = Arguments.number1.Insert(0, ostatok);
+            //            if (put_comma)
+            //            {
+            //                Arguments.number1 = Arguments.number1 + '0';
+            //            }
+            //        }
+            //        else
+            //        {
+            //            if (i <= length_num1)
+            //            {
+            //                if (put_comma)
+            //                {
+            //                    Arguments.number1 = Arguments.number1 + '0';
+            //                }
+            //                if (!start)
+            //                {
+            //                    Arguments.result = Arguments.result + '0';
+            //                }
+            //                ostatok = ostatok + Arguments.number1[i];
+            //                dividend = Convert.ToInt32(ostatok);
+            //                int c = dividend / divider;
+            //                Arguments.result = Arguments.result + Convert.ToString(c);
+            //                int ost = dividend - c * divider;
+            //                ostatok = Convert.ToString(ost);
+            //                Arguments.ostatok_length = Convert.ToInt32(ostatok.Length);
+            //                Arguments.number1 = Arguments.number1.Remove(0, i+1);
+            //                Arguments.number1 = Arguments.number1.Insert(0, ostatok);
+            //            }
+            //            else
+            //            {
+            //                Arguments.number1 = Arguments.number1 + '0';
+            //                if (!put_comma)
+            //                {
+            //                    Arguments.result = Arguments.result + ',';
+            //                    put_comma = true;
+            //                }
+            //                else
+            //                {
+            //                    Arguments.result = Arguments.result + "0";
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else //Если длина делимого меньше
+            //    {
+            //        if (!put_comma)
+            //        {
+            //            if (Arguments.result == null)
+            //            {
+            //                Arguments.result = Arguments.result + "0";
+            //            }
+            //            Arguments.result = Arguments.result + ",";
+            //            put_comma = true;
+            //        }
+            //        else
+            //        {
+            //        }
+            //        Arguments.number1 = Arguments.number1 + "0";
+            //        Arguments.ostatok_length = Convert.ToInt32(Arguments.number1.Length);
+            //    }
+            //    start = false;
+            //}
             while (!stop)
             {
                 int length_num1 = Arguments.number1.Length; //
                 int c = 0;
-                if (length_num1 >= length_num2)
+                if (length_num1 >= length_take)
                 {
-                    int length_num = length_num2; //
+                    int length_num = length_take; //
                     string str_argument1 = Arguments.number1.Substring(0, length_num); //Обрезаем строку под размер делителя
-                    int dividend = Convert.ToInt32(str_argument1);                     
+                    int dividend = Convert.ToInt32(str_argument1);
                     if (dividend >= divider) //Если делимое больше или равно делителю
                     {
                         c = dividend / divider;
@@ -130,3 +334,5 @@ namespace Calc
         }
     }
 }
+/* Новый алгоритм для деления: в самом начале цикла забираем длину числа такую, чтобы оно делилось нацело,
+ * если число меньшей длины чем сам делитель и первая операция
