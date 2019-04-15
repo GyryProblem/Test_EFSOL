@@ -213,7 +213,30 @@ namespace Calc
             {
                 Arguments.number1 = num1;
                 Arguments.number2 = NumberBox.Text.TrimEnd(',');
-                Division.DivisionNumbers();
+                Arguments.operation = Arguments.number1.Remove(0, Arguments.number1.Length - 1);
+                Arguments.number1 = Arguments.number1.Remove(Arguments.number1.Length - 2, 2);
+                Information.Clear();
+                Information.Text = Arguments.number1 + " " + Arguments.operation + "\n" + Arguments.number2 +"\n";
+                NumberBox.Text = "0";
+                Arg1.Content = "";
+                Arguments.result = "";
+                if (Arguments.operation == "/")
+                {
+                    if (Arguments.number2 == "0")
+                    {
+                        Information.Clear();
+                        Information.Text = "Деление на 0 невозможно";
+                    }
+                    else
+                    {
+                        Operations.DivisionNumbers();
+                        Information.Text = Information.Text + "Ответ: " + Arguments.result;
+                    }
+                }
+            }
+            else
+            {
+                Information.Text = "Ничего не введено";
             }
         }
     }

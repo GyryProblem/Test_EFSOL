@@ -40,6 +40,6 @@
         <Button Grid.Column="3" Grid.Row="3" FontSize="24" Background="#66DDDDDD" BorderThickness="0" Margin="2" Click="Button_Click_11">+</Button>
         <Button Grid.Column="3" Grid.Row="4" FontSize="20" Background="#66DDDDDD" BorderThickness="0" Margin="2" Click="Button_Click_15">CLEAR</Button>
         <Button Grid.Column="4" Grid.Row="4" FontSize="24" Background="#66DDDDDD" BorderThickness="0" Margin="2" Click="Button_Click_16">=</Button>
-        <TextBox x:Name="Information" Grid.Column="4" Grid.RowSpan="4" BorderThickness="0,0,0,5" Margin="2" SelectionBrush="#FFF44848" BorderBrush="#FFF44848" TextWrapping="Wrap" IsReadOnly="True" ScrollViewer.CanContentScroll="True"/>
+        <TextBox x:Name="Information" Grid.Column="4" Grid.RowSpan="4" BorderThickness="0,0,0,5" Margin="2" SelectionBrush="#FFF44848" BorderBrush="#FFF44848" TextWrapping="Wrap" IsReadOnly="True" ScrollViewer.CanContentScroll="True" FontSize="18"/>
     </Grid>
 </Window>
