@@ -240,7 +240,7 @@ namespace Calc
                 }
                 if (Arguments.operation == "+")
                 {
-                    Operations.Summary();
+                    Operations.SummaryNumbers();
                     Information.Text = Information.Text + "Ответ: " + Arguments.result;
                 }
             }

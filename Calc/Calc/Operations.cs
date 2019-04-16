@@ -21,7 +21,7 @@ namespace Calc
             {
                 in_num2 = Arguments.number2.Length - in_num2 - 1;
             }
-            if (in_num1 > in_num2)
+            if (in_num1 >= in_num2)
             {
                 for (int i = 1; i <= in_num1; i++)
                 {
@@ -37,7 +37,12 @@ namespace Calc
             }
             return increase;
         }
-        public static void Summary()
+        public static void SubtructionNumbers()
+        {
+
+        }
+
+        public static void SummaryNumbers()
         {
             int e = FloatHere();
             Arguments.num1 = Convert.ToDouble(Arguments.number1);
