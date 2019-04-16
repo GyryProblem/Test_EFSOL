@@ -233,6 +233,16 @@ namespace Calc
                         Information.Text = Information.Text + "Ответ: " + Arguments.result;
                     }
                 }
+                if (Arguments.operation == "*")
+                {
+                    Operations.MultiplyNumbers();
+                    Information.Text = Information.Text + "Ответ: " + Arguments.result;
+                }
+                if (Arguments.operation == "+")
+                {
+                    Operations.Summary();
+                    Information.Text = Information.Text + "Ответ: " + Arguments.result;
+                }
             }
             else
             {
