@@ -37,10 +37,85 @@ namespace Calc
             }
             return increase;
         }
-        public static void SubtructionNumbers()
-        {
-
-        }
+        //public static void SubtructionNumbers()
+        //{
+        //    int e = FloatHere();
+        //    Arguments.num1 = Convert.ToDouble(Arguments.number1);
+        //    Arguments.num2 = Convert.ToDouble(Arguments.number2);
+        //    Arguments.num1 = Arguments.num1 * e;
+        //    Arguments.num2 = Arguments.num2 * e;
+        //    Arguments.number1 = Convert.ToString(Arguments.num1);
+        //    Arguments.number2 = Convert.ToString(Arguments.num2);
+        //    int last_num1 = Arguments.number1.Length - 1;
+        //    int index_num2 = Arguments.number2.Length - 1;
+        //    bool minus = false;
+        //    if (Arguments.num1 < Arguments.num2)
+        //    {
+        //        string change = Arguments.number1;
+        //        Arguments.number1 = Arguments.number2;
+        //        Arguments.number2 = change;
+        //        last_num1 = Arguments.number1.Length - 1;
+        //        index_num2 = Arguments.number2.Length - 1;
+        //        minus = true;
+        //    }
+        //    while (last_num1 < index_num2)
+        //    {
+        //        Arguments.number1 = Arguments.number1.Insert(0, "0");
+        //        last_num1++;
+        //    }
+        //    while (last_num1 > index_num2)
+        //    {
+        //        Arguments.number2 = Arguments.number2.Insert(0, "0");
+        //        index_num2++;
+        //    }
+        //    for (int j = last_num1; j >= 0; j--)
+        //    {
+        //        string sub1 = Arguments.number1.Substring(j, 1);
+        //        string sub2 = Arguments.number2.Substring(j, 1);
+        //        int sub_num1 = Convert.ToInt32(sub1);
+        //        int sub_num2 = Convert.ToInt32(sub2);
+        //        int sub_num = 0;
+        //        string sub;
+        //        if (sub_num1 < sub_num2)
+        //        {
+        //            for (int i = j - 1; i >= 0; i--)
+        //            {
+        //                if (Arguments.number1[i] == '0')
+        //                {
+        //                    Arguments.number1 = Arguments.number1.Remove(i, 1);
+        //                    Arguments.number1 = Arguments.number1.Insert(i, "9");
+        //                }
+        //                else
+        //                {
+        //                    string below = Arguments.number1.Substring(i, 1);
+        //                    Arguments.number1 = Arguments.number1.Remove(i, 1);
+        //                    int beloww = Convert.ToInt32(below);
+        //                    beloww--;
+        //                    below = Convert.ToString(beloww);
+        //                    Arguments.number1.Insert(i, below);
+        //                    break;
+        //                }
+        //            }
+        //            sub1 = sub1.Insert(0, "1");
+        //            sub_num1 = Convert.ToInt32(sub1);
+        //            sub_num = sub_num1 - sub_num2;
+        //            Arguments.result = Arguments.result.Insert(0, Convert.ToString(sub_num));
+        //        }
+        //        else
+        //        {
+        //            sub_num1 = Convert.ToInt32(sub1);
+        //            sub_num = sub_num1 - sub_num2;
+        //            Arguments.result = Arguments.result.Insert(0, Convert.ToString(sub_num));
+        //        }
+        //    }
+        //    double resul = Convert.ToInt32(Arguments.result);
+        //    resul = resul / e;
+        //    Arguments.result = Convert.ToString(resul);
+        //    if (minus)
+        //    {
+        //        Arguments.result = Arguments.result.Insert(0, "-");
+        //    }
+        //}
 
         public static void SummaryNumbers()
         {

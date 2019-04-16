@@ -243,6 +243,11 @@ namespace Calc
                     Operations.SummaryNumbers();
                     Information.Text = Information.Text + "Ответ: " + Arguments.result;
                 }
+                if (Arguments.operation == "-")
+                {
+                    Operations.SubtructionNumbers();
+                    Information.Text = Information.Text + "Ответ: " + Arguments.result;
+                }
             }
             else
             {
